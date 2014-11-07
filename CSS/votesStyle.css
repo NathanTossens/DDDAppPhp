@@ -1,0 +1,15 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 06-nov.-2014, 21:09:47
+    Author     : Nathan
+*/
+
+.ulTextBox { height: 100px; overflow: auto; width: 200px; border: 1px solid #000; }
+.ulTextBox { list-style-type: none; margin: 0; padding: 0; overflow-x: hidden; }
+.liTextBox { margin: 0; padding: 0; }
+.labelTextBox { display: block; color: WindowText; background-color: Window; margin: 0; padding: 0; width: 100%; }
+.labelTextBox:hover { background-color: Highlight; color: HighlightText; }
