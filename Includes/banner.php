@@ -1,0 +1,1 @@
+<img src="Ressources/Images/banner.jpg" alt="Mountain View" style="width:100%" >

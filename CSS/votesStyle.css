@@ -13,3 +13,5 @@ and open the template in the editor.
 .liTextBox { margin: 0; padding: 0; }
 .labelTextBox { display: block; color: WindowText; background-color: Window; margin: 0; padding: 0; width: 100%; }
 .labelTextBox:hover { background-color: Highlight; color: HighlightText; }
+
+        

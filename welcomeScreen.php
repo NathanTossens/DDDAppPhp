@@ -9,6 +9,7 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <link rel="stylesheet" href="CSS\welcomeStyle.css">
         <title>Welcome</title>
+        <?php include("Includes/banner.php"); ?>
     </head>
     <body >
         <div></div>

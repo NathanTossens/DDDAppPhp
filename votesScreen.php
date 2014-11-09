@@ -6,12 +6,13 @@ and open the template in the editor.
 -->
 <html>
     <head>
+        <?php include("Includes/banner.php"); ?>
         <?php include("Includes/menu.php"); ?>
         <link rel="stylesheet" href="CSS\welcomeStyle.css">
         <link rel="stylesheet" href="CSS\votesStyle.css">
         <link rel="stylesheet" href="CSS\verticalMenuStyle.css">
         <meta charset="UTF-8">
-        <title></title>
+        <title>Polls</title>
     </head>
     <body>
         <br></br>
@@ -28,7 +29,7 @@ and open the template in the editor.
                             <ul>
                                 <li><a href="votesScreen.php?skill=Justice">Justice</a></li>
                                 <li><a href="votesScreen.php?skill=Legislation">Legislation</a></li>
-                                <li><a href="votesScreen.php?skill=ForeignAffairs">Foreign Affair</a></li>
+                                <li><a href="votesScreen.php?skill=Foreign Affairs">Foreign Affair</a></li>
                                 <li><a href="votesScreen.php?skill=true">Compétences4</a></li>
                             </ul>
                         </div>
