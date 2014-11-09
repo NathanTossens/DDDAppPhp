@@ -38,11 +38,11 @@ and open the template in the editor.
         $response->closeCursor();
         ?>
         <script>
-            var variableToSend = "test";
-                        $.post('resultScreen.php', {variable: variableToSend});
-                        
-            alert($_POST['variable'])
-                        
+            var cpt = <?php echo $cpt ?>;
+            var skillNameJS= <?php echo json_encode($skillName ); ?>;
+            var countJS= <?php echo json_encode($count ); ?>;
+                  
+                       
             /* var doughnutDataFormation;
              for( i=0; i<=cpt ; i++){
              value: <?php echo $count[i]; ?>,
@@ -75,12 +75,11 @@ and open the template in the editor.
                 var ctx = document.getElementById("chart-area").getContext("2d");
                 var mydoughnutChart = new Chart(ctx).Doughnut();
                 for (var i = 0; i < cpt; i++) {
-                    
                     mydoughnutChart.addData({
-                        value: <?php echo $count[0]; ?>,
+                        value: countJS[i],
                         color: "#B48EAD",
                         highlight: "#C69CBE",
-                        label: "<?php echo $skillName[0]; ?>"
+                        label: skillNameJS[i]
                     });
                 }
             };
