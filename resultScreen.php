@@ -11,7 +11,6 @@ and open the template in the editor.
         <script src="Ressources/Librairies/Chart.js"></script>    
         <script src="Ressources/Librairies/jquery-ui/external/jquery/jquery.js"></script>
         <script src="Ressources/Librairies/jquery-ui/jquery-ui.js"></script>     
-        <script src="Ressources/JSConfig/doghnutConfig.js"></script>
         <?php include("Includes/banner.php"); ?>
         <?php include("Includes/menu.php"); ?>
         <style>

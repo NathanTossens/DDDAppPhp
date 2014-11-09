@@ -14,7 +14,7 @@ http://subtlepatterns.com/patterns/wood_pattern.png
 */
 html {
 	
-	font-size: 10pt;
+	font-size: 2pt;
 }
 .titleLogin
 {
@@ -53,6 +53,9 @@ label {
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2), 
     			inset 0px 1px 0px 0px rgba(250, 250, 250, 0.5);
     border: 1px solid rgba(0, 0, 0, 0.3);
+}
+forgottenPwd{
+    font-size: 5pt;
 }
 .loginform ul {
 	padding: 0;
