@@ -12,7 +12,6 @@ and open the template in the editor.
         <?php include("Includes/banner.php"); ?>
     </head>
     <body >
-        <div></div>
         <?php
         if (isset($_POST['usermail']) && isset($_POST['password'])) {
             $bdd = new PDO('mysql:host=localhost;dbname=DDD', 'root', '');

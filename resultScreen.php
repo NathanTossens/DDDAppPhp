@@ -15,6 +15,9 @@ and open the template in the editor.
         <?php include("Includes/banner.php"); ?>
         <?php include("Includes/menu.php"); ?>
         <style>
+            body{
+                background-image: url(Ressources/Images/generalBackground.jpg);
+            }
             div canvas {
                 width:50;
                 height:50;
@@ -23,8 +26,10 @@ and open the template in the editor.
     </head>
     <body>
         <div id="canvas-holder">
-            <canvas id="chart-area"/>
+            <h1>Skills distribution :</h1>
+            <canvas id="skills-area"/>
         </div>
+        
 
         <?php
         $cpt = 0;
@@ -38,47 +43,18 @@ and open the template in the editor.
         $response->closeCursor();
         ?>
         <script>
+           
             var cpt = <?php echo $cpt ?>;
-            var skillNameJS= <?php echo json_encode($skillName ); ?>;
-            var countJS= <?php echo json_encode($count ); ?>;
-                  
-                       
-            /* var doughnutDataFormation;
-             for( i=0; i<=cpt ; i++){
-             value: <?php echo $count[i]; ?>,
-             color: "#F7464A",
-             highlight: "#FF5A5E",
-             label: "<?php echo $skillName[$cpt]; ?>"}
-             }*/
-            var doughnutData = [
-                {
-                    value: <?php echo $count[0]; ?>,
-                    color: "#F7464A",
-                    highlight: "#FF5A5E",
-                    label: "<?php echo $skillName[0]; ?>"
-                },
-                {
-                    value: <?php echo $count[1]; ?>,
-                    color: "#46BFBD",
-                    highlight: "#5AD3D1",
-                    label: "<?php echo $skillName[1]; ?>"
-                },
-                {
-                    value: <?php echo $count[2]; ?>,
-                    color: "#F7464A",
-                    highlight: "#FF5A5E",
-                    label: "<?php echo $skillName[2]; ?>"
-                }
-
-            ];
+            var skillNameJS = <?php echo json_encode($skillName); ?>;
+            var countJS = <?php echo json_encode($count); ?>;
             window.onload = function () {
-                var ctx = document.getElementById("chart-area").getContext("2d");
+                var ctx = document.getElementById("skills-area").getContext("2d");
                 var mydoughnutChart = new Chart(ctx).Doughnut();
                 for (var i = 0; i < cpt; i++) {
                     mydoughnutChart.addData({
-                        value: countJS[i],
-                        color: "#B48EAD",
-                        highlight: "#C69CBE",
+                        value: parseInt(countJS[i]),
+                        color: '#' + Math.random().toString(16).substr(-6),
+                        highlight: '#' + Math.random().toString(16).substr(-6),
                         label: skillNameJS[i]
                     });
                 }
