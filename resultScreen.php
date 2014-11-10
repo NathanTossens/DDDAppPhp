@@ -8,9 +8,8 @@ and open the template in the editor.
     <head>
         <meta charset="UTF-8">
         <title>Results</title>
+        <link rel="stylesheet" href="CSS\verticalMenuStyle.css">
         <script src="Ressources/Librairies/Chart.js"></script>    
-        <script src="Ressources/Librairies/jquery-ui/external/jquery/jquery.js"></script>
-        <script src="Ressources/Librairies/jquery-ui/jquery-ui.js"></script>     
         <?php include("Includes/banner.php"); ?>
         <?php include("Includes/menu.php"); ?>
         <style>
@@ -24,10 +23,42 @@ and open the template in the editor.
         </style>
     </head>
     <body>
+         <div class="wrapper" style="float:left">
+            <nav class="vertical">
+                <ul>
+                    <li>
+                        <a href="#">Skills</a>
+                        <div>
+                            <ul>
+                                <li><a href="resultScreen.php?skill=Justice">Justice</a></li>
+                                <li><a href="resultScreen.php?skill=Legislation">Legislation</a></li>
+                                <li><a href="resultScreen.php?skill=Foreign Affairs">Foreign Affair</a></li>
+                                <li><a href="resultScreen.php?skill=true">Compétences4</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
         <div id="canvas-holder">
             <h1>Skills distribution :</h1>
             <canvas id="skills-area"/>
         </div>
+        
+         <center>
+        <div>
+            <?php
+            if (isset($_GET['skill'])) {
+                getResults();
+            }
+
+            function getResults() {
+                include("Includes/resultsCharts.php");
+            }
+            ?>
+        </div>
+    </center>
+    
         
 
         <?php
@@ -46,7 +77,6 @@ and open the template in the editor.
             var cpt = <?php echo $cpt ?>;
             var skillNameJS = <?php echo json_encode($skillName); ?>;
             var countJS = <?php echo json_encode($count); ?>;
-            window.onload = function () {
                 var ctx = document.getElementById("skills-area").getContext("2d");
                 var mydoughnutChart = new Chart(ctx).Doughnut();
                 for (var i = 0; i < cpt; i++) {
@@ -57,7 +87,6 @@ and open the template in the editor.
                         label: skillNameJS[i]
                     });
                 }
-            };
         </script>
     </body>
 </html>
